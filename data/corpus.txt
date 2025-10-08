@@ -1,0 +1,1 @@
+You will have a file named corpus.txt after running make_data.py
