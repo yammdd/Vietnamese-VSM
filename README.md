@@ -52,5 +52,33 @@ pip install -r requirements.txt
 
 ## 📘 Data Preparation
 
+Download `wikipedia_vi.`: [here](https://drive.google.com/file/d/1_gFXaM3vFplPnyJGsV1QY5gqgtFjArdg/view?usp=sharing)
+
+Make sure `data/wikipedia_vi.csv` exists before running the program.
+
+Then run:
+```bash
+python make_data.py --input wikipedia_vi.csv --stopwords stopwords.txt
+```
+This will generate:
+```bash
+data/corpus.txt
+data/meta.csv
+```
+
+---
+
+## 🧠 Train and Use TF-IDF Model
+
+Train TF-IDF and save model
+```bash
+Train TF-IDF and save model
+```
+
+Query similar documents
+```bash
+python using_model_demo.py --query "Đại học Quốc Gia Hà Nội"
+```
+
 
 
