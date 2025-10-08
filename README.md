@@ -34,7 +34,7 @@ It includes preprocessing, training, similarity search, and t-SNE visualization 
 
 **_Requires: Python 3.11_**
 
-### (Optional) Create and activate a virtual environment 
+(Optional) Create and activate a virtual environment 
 
 ```bash
 python -m venv venv
@@ -43,7 +43,7 @@ source venv/bin/activate          # on macOS/Linux
 venv\Scripts\activate             # on Windows
 ```
 
-### Install dependencies
+Install dependencies
 ```bash
 pip install -r requirements.txt
 ```
@@ -79,6 +79,55 @@ Query similar documents
 ```bash
 python using_model_demo.py --query "Đại học Quốc Gia Hà Nội"
 ```
+Example output:
+```bash
+#1  idx=3323  sim=0.7081  title=Đại học Quốc gia Hà Nội
+#2  idx=1138283  sim=0.6408  title=Nguyễn Kim Sơn
+#3  idx=86127  sim=0.6327  title=Khối Trung học phổ thông Chuyên Đại học Quốc gia Hà Nội
+#4  idx=1273514  sim=0.6130  title=Trường Đại học Luật, Đại học Quốc gia Hà Nội
+#5  idx=3005  sim=0.5836  title=Trường Đại học Tổng hợp Hà Nội
+```
 
+---
 
+## 🌈 Visualization with t-SNE
+
+### Document-level visualization
+```bash
+python visualize.py --mode docs --limit 150
+```
+
+This shows a scatter plot (t-SNE projection of TF-IDF → SVD-50)
+
+### Word-level visualization (Word2Vec or FastText)
+
+Train embeddings first:
+```bash
+python word2vec.py --vector_size 100 --min_count 2
+# or
+python fastText.py --input data/corpus.txt --model_path models/fasttext.bin
+```
+
+Then visualize:
+```bash
+python visualize.py --mode words --model word2vec --topk 300
+# or
+python visualize.py --mode words --model fasttext --topk 300
+```
+
+---
+
+## 📝 Notes
+
+> 🧠 **Important:**  
+> It is **strongly recommended** to run this project inside a **Python virtual environment**.  
+> Some dependencies (e.g., `underthesea`, `pyvi`, `fasttext`) may not install or run correctly on a local system without isolation.  
+> If you encounter installation errors or version conflicts, create a virtual environment as shown below.
+> 
+---
+
+## 📚 References
+
+* [Xây dựng mô hình không gian vector cho Tiếng Việt](https://viblo.asia/p/xay-dung-mo-hinh-khong-gian-vector-cho-tieng-viet-GrLZDXr2Zk0)
+* [GitHub Tutorial](https://github.com/quangph-1686/FramgiaBlog/tree/master/Blog01_Word_embedding)
 
