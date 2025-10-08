@@ -1,1 +1,1 @@
-You will have a file named meta.csv after running make_data.py
+You will have a file named meta.csv after running make_data.py.
