@@ -120,7 +120,7 @@ python visualize.py --mode words --model fasttext --topk 300
 ## 📝 Notes
 
 > 🧠 **Important:**  
-> It is **strongly recommended** to run this project inside a **Python virtual environment**.  
+> It is recommended to run this project inside a **Python virtual environment**.  
 > Some dependencies (e.g., `underthesea`, `pyvi`, `fasttext`) may not install or run correctly on a local system without isolation.  
 > If you encounter installation errors or version conflicts, create a virtual environment as shown below.
 > 
