@@ -1,0 +1,8 @@
+pandas
+scikit-learn
+matplotlib
+joblib
+gensim
+underthesea
+pyvi
+fasttext-wheel
