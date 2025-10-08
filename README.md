@@ -135,6 +135,19 @@ Example:
 
 ## 📚 References
 
-* [Xây dựng mô hình không gian vector cho Tiếng Việt](https://viblo.asia/p/xay-dung-mo-hinh-khong-gian-vector-cho-tieng-viet-GrLZDXr2Zk0)
-* [GitHub Tutorial](https://github.com/quangph-1686/FramgiaBlog/tree/master/Blog01_Word_embedding)
+1. **Phạm Hồng Quang (2018).**  
+   [Building a vector space model for Vietnamese](https://viblo.asia/p/xay-dung-mo-hinh-khong-gian-vector-cho-tieng-viet-GrLZDXr2Zk0)
+
+2. **Mikolov et al. (2013).**  
+   *Efficient Estimation of Word Representations in Vector Space.* arXiv:1301.3781
+
+3. **Bojanowski et al. (2017).**  
+   *Enriching Word Vectors with Subword Information.* TACL, 5, 135–146.
+
+4. **van der Maaten & Hinton (2008).**  
+   *Visualizing Data using t-SNE.* JMLR, 9, 2579–2605.
+
+5. **Manning, Raghavan & Schütze (2008).**  
+   *Introduction to Information Retrieval.* Cambridge University Press.
+
 
