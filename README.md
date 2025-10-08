@@ -99,6 +99,8 @@ python visualize.py --mode docs --limit 150
 
 This shows a scatter plot (t-SNE projection of TF-IDF → SVD-50)
 
+![example1](assets/Figure_1.png)
+
 ### Word-level visualization (Word2Vec or FastText)
 
 Train embeddings first:
@@ -114,6 +116,11 @@ python visualize.py --mode words --model word2vec --topk 300
 # or
 python visualize.py --mode words --model fasttext --topk 300
 ```
+Example:
+* Word2Vec
+![example2](assets/Figure_2.png)
+* FastText
+![example3](assets/Figure_3.png)
 
 ---
 
