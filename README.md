@@ -52,7 +52,7 @@ pip install -r requirements.txt
 
 ## 📘 Data Preparation
 
-Download `wikipedia_vi.`: [here](https://drive.google.com/file/d/1_gFXaM3vFplPnyJGsV1QY5gqgtFjArdg/view?usp=sharing)
+Download `wikipedia_vi.csv`: [here](https://drive.google.com/file/d/1_gFXaM3vFplPnyJGsV1QY5gqgtFjArdg/view?usp=sharing)
 
 Make sure `data/wikipedia_vi.csv` exists before running the program.
 
@@ -72,7 +72,7 @@ data/meta.csv
 
 Train TF-IDF and save model
 ```bash
-Train TF-IDF and save model
+python using_model_demo.py --fit
 ```
 
 Query similar documents
