@@ -4,10 +4,6 @@ import argparse, os, sys, joblib, numpy as np, pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.decomposition import TruncatedSVD
-
-# -----------------------------
-# Tokenizer helper (giữ nguyên như cũ)
-# -----------------------------
 import re
 
 def _try_import_tokenizers():
@@ -36,9 +32,6 @@ def normalize_text(s: str) -> str:
     s = s.replace("\u00a0", " ").strip()
     return s
 
-# -----------------------------
-# ✅ Đưa 2 hàm này RA NGOÀI fit_tfidf
-# -----------------------------
 def tokenize_vn(s):
     """Global tokenizer for Vietnamese text"""
     return VN_TOKENIZE(s)
@@ -47,9 +40,6 @@ def identity_func(s):
     """Identity preprocessor (do nothing)"""
     return s
 
-# -----------------------------
-# TF-IDF huấn luyện và lưu model
-# -----------------------------
 def ensure_corpus(corpus_path="data/corpus.txt"):
     if not os.path.exists(corpus_path):
         print("Corpus not found. Run: python make_data.py --input data/datatrain.txt", file=sys.stderr)
@@ -69,12 +59,11 @@ def fit_tfidf(corpus, ngram=(1,2), max_features=50000):
     return vec, X
 
 def load_meta(path="./data/meta.csv"):
-    """Load metadata (id, title) nếu có."""
+    """Load metadata (id, title) if any"""
     import pandas as pd, os
     if os.path.exists(path):
         return pd.read_csv(path)
     else:
-        # nếu không có meta.csv thì tạo tạm
         return pd.DataFrame({"id": [], "title": []})
 
 def main():
